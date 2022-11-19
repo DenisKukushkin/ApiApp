@@ -9,12 +9,22 @@ import UIKit
 
 class JokeViewController: UIViewController {
     
-    @IBOutlet weak var jokeScreen: UILabel!
-    
-    let jokeApi = "https://api.chucknorris.io/jokes/random"
+    @IBOutlet weak var jokeLabel: UILabel!
+    @IBOutlet weak var funEmojiLabel: UILabel!
+   
+    private let jokeApi = "https://api.chucknorris.io/jokes/random"
+    private let funEmojis = ["😂", "🤣", "😅", "😁", "😄", "🤪", "😀", "😃", "😝", "🤓", "👻", "😹", "🙉"]
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        jokeLabel.layer.masksToBounds = true
+        jokeLabel.layer.cornerRadius = 10
+    }
+    
     @IBAction func getJokeButtonPressed() {
         fetchJoke()
+        funEmojiLabel.isHidden = false
+        funEmojiLabel.text = funEmojis.randomElement()
     }
     
 }
@@ -33,7 +43,7 @@ extension JokeViewController {
             do {
                 let joke = try JSONDecoder().decode(Joke.self, from: data)
                 DispatchQueue.main.async {
-                    self.jokeScreen.text = joke.value
+                    self.jokeLabel.text = joke.value
                 }
             } catch let error {
                 print(error.localizedDescription)

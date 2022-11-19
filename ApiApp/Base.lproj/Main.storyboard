@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Dog View Controller-->
         <scene sceneID="oXq-fk-gRJ">
             <objects>
                 <viewController id="Dgh-C8-JaJ" customClass="DogViewController" customModule="ApiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,50 +17,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Kc-PAa">
-                                <rect key="frame" x="60" y="449" width="200" height="50"/>
+                                <rect key="frame" x="85" y="429" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="CGR-nE-fm1"/>
                                     <constraint firstAttribute="height" constant="50" id="gDQ-MY-Xr2"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="hjr-tp-ceA"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="GET DOG">
-                                            <attributes>
-                                                <color key="NSColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="21" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="tinted" title="GET DOG">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="getDogImageButtonPressed" destination="Dgh-C8-JaJ" eventType="touchUpInside" id="Hfb-sD-qGb"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-zg-au1">
-                                <rect key="frame" x="16" y="20" width="288" height="213"/>
-                            </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rh2-6k-pYF">
-                                <rect key="frame" x="150" y="116.5" width="20" height="20"/>
+                                <rect key="frame" x="150" y="235.5" width="20" height="20"/>
                             </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-zg-au1">
+                                <rect key="frame" x="16" y="122" width="288" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k1T-zg-au1" secondAttribute="height" multiplier="288:247" id="Phc-c4-mAu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bQ-CP-Ss2">
+                                <rect key="frame" x="127.5" y="20" width="65" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Rs-Fx-iCv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="9Rs-Fx-iCv" firstAttribute="bottom" secondItem="YcR-Kc-PAa" secondAttribute="bottom" constant="20" id="7YN-Zg-VAP"/>
+                            <constraint firstItem="9bQ-CP-Ss2" firstAttribute="top" secondItem="9Rs-Fx-iCv" secondAttribute="top" constant="20" id="AJh-4G-tIv"/>
                             <constraint firstItem="9Rs-Fx-iCv" firstAttribute="trailing" secondItem="k1T-zg-au1" secondAttribute="trailing" constant="16" id="CcJ-W9-0zQ"/>
-                            <constraint firstItem="k1T-zg-au1" firstAttribute="top" secondItem="9Rs-Fx-iCv" secondAttribute="top" constant="20" id="EfQ-uO-4Ne"/>
+                            <constraint firstItem="k1T-zg-au1" firstAttribute="top" secondItem="9bQ-CP-Ss2" secondAttribute="bottom" constant="30" id="GKV-8k-INx"/>
+                            <constraint firstItem="9Rs-Fx-iCv" firstAttribute="bottom" secondItem="YcR-Kc-PAa" secondAttribute="bottom" constant="40" id="HKQ-3G-oQE"/>
                             <constraint firstItem="rh2-6k-pYF" firstAttribute="centerX" secondItem="k1T-zg-au1" secondAttribute="centerX" id="HOG-Az-ZjI"/>
+                            <constraint firstItem="9bQ-CP-Ss2" firstAttribute="centerX" secondItem="afi-c2-k7V" secondAttribute="centerX" id="MQn-LI-oho"/>
                             <constraint firstItem="YcR-Kc-PAa" firstAttribute="centerX" secondItem="afi-c2-k7V" secondAttribute="centerX" id="Pwm-um-vBe"/>
-                            <constraint firstItem="k1T-zg-au1" firstAttribute="height" secondItem="afi-c2-k7V" secondAttribute="height" multiplier="0.375" id="Rny-8r-S9h"/>
                             <constraint firstItem="k1T-zg-au1" firstAttribute="leading" secondItem="9Rs-Fx-iCv" secondAttribute="leading" constant="16" id="pBi-gt-Ykz"/>
                             <constraint firstItem="rh2-6k-pYF" firstAttribute="centerY" secondItem="k1T-zg-au1" secondAttribute="centerY" id="qKX-x0-Xv6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="fgb-cs-QBY"/>
+                    <tabBarItem key="tabBarItem" title="" image="pawprint.circle" catalog="system" id="fgb-cs-QBY"/>
                     <connections>
                         <outlet property="activityIndicator" destination="rh2-6k-pYF" id="7sa-Tm-FBF"/>
+                        <outlet property="dogEmojiLabel" destination="9bQ-CP-Ss2" id="eYH-bV-MBL"/>
                         <outlet property="dogImageView" destination="k1T-zg-au1" id="yzS-Vd-Jbi"/>
                     </connections>
                 </viewController>
@@ -68,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="-798.75" y="-225"/>
         </scene>
-        <!--Item 1-->
+        <!--Joke View Controller-->
         <scene sceneID="mj7-lI-KTc">
             <objects>
                 <viewController id="VYS-kX-15o" customClass="JokeViewController" customModule="ApiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,66 +84,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It will be a random joke over here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-8w-zXm">
+                                <rect key="frame" x="16" y="122" width="288" height="247"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="6bW-ZN-ULL"/>
+                                    <constraint firstAttribute="width" secondItem="ovU-8w-zXm" secondAttribute="height" multiplier="288:247" id="dOb-pR-UMY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-VP-kYh">
+                                <rect key="frame" x="127.5" y="20" width="65" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10f-6C-G54">
-                                <rect key="frame" x="60" y="449" width="200" height="50"/>
+                                <rect key="frame" x="85" y="429" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2ee-KR-lJg"/>
-                                    <constraint firstAttribute="width" constant="200" id="WWF-vy-GGC"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="WbU-si-6D2"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="qzn-9Y-0kQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="GET JOKE">
-                                            <attributes>
-                                                <color key="NSColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="21" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="tinted" title="GET JOKE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="getJokeButtonPressed" destination="VYS-kX-15o" eventType="touchUpInside" id="Cm7-r8-qBU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-8w-zXm">
-                                <rect key="frame" x="16" y="20" width="288" height="213"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="213" id="iZz-Vu-bqD"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="It will be a random joke over here">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="15" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="48o-j5-ZFH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="ovU-8w-zXm" firstAttribute="top" secondItem="xVX-VP-kYh" secondAttribute="bottom" constant="30" id="2yU-mZ-9lf"/>
+                            <constraint firstItem="xVX-VP-kYh" firstAttribute="centerX" secondItem="XVW-31-4rw" secondAttribute="centerX" id="4jb-7v-hTA"/>
                             <constraint firstItem="48o-j5-ZFH" firstAttribute="trailing" secondItem="ovU-8w-zXm" secondAttribute="trailing" constant="16" id="MD7-Hu-bHn"/>
                             <constraint firstItem="ovU-8w-zXm" firstAttribute="leading" secondItem="48o-j5-ZFH" secondAttribute="leading" constant="16" id="SQc-KY-RmA"/>
-                            <constraint firstItem="ovU-8w-zXm" firstAttribute="top" secondItem="48o-j5-ZFH" secondAttribute="top" constant="20" id="lul-wf-5Ki"/>
-                            <constraint firstItem="48o-j5-ZFH" firstAttribute="bottom" secondItem="10f-6C-G54" secondAttribute="bottom" constant="20" id="vP6-pu-9tx"/>
-                            <constraint firstItem="ovU-8w-zXm" firstAttribute="height" secondItem="XVW-31-4rw" secondAttribute="height" multiplier="0.375" id="xaR-Zt-qT9"/>
+                            <constraint firstItem="xVX-VP-kYh" firstAttribute="top" secondItem="48o-j5-ZFH" secondAttribute="top" constant="20" id="Wqb-H5-myt"/>
+                            <constraint firstItem="48o-j5-ZFH" firstAttribute="bottom" secondItem="10f-6C-G54" secondAttribute="bottom" constant="40" id="bKG-IY-frD"/>
                             <constraint firstItem="10f-6C-G54" firstAttribute="centerX" secondItem="XVW-31-4rw" secondAttribute="centerX" id="ymD-lc-qI3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ZFs-s0-cxM"/>
+                    <tabBarItem key="tabBarItem" title="" image="face.smiling" catalog="system" id="ZFs-s0-cxM"/>
                     <connections>
-                        <outlet property="jokeScreen" destination="ovU-8w-zXm" id="7Wh-9J-YNp"/>
+                        <outlet property="funEmojiLabel" destination="xVX-VP-kYh" id="W1L-5a-7SH"/>
+                        <outlet property="jokeLabel" destination="ovU-8w-zXm" id="7Wh-9J-YNp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuU-jo-0cs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,7 +150,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vkm-7N-ok7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.89813250300000003" green="0.89780467750000004" blue="0.91372770069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="VYS-kX-15o" kind="relationship" relationship="viewControllers" id="VCp-jN-ebx"/>
@@ -162,8 +163,10 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="face.smiling" catalog="system" width="128" height="123"/>
+        <image name="pawprint.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
