@@ -14,12 +14,6 @@ class JokeViewController: UIViewController {
    
     private let jokeApi = "https://api.chucknorris.io/jokes/random"
     private let funEmojis = ["😂", "🤣", "😅", "😁", "😄", "🤪", "😀", "😃", "😝", "🤓", "👻", "😹", "🙉"]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        jokeLabel.layer.masksToBounds = true
-        jokeLabel.layer.cornerRadius = 10
-    }
     
     @IBAction func getJokeButtonPressed() {
         fetchJoke()
