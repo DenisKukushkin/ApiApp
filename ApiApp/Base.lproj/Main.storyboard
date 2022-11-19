@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jHf-XQ-eh2">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -8,29 +8,112 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="oXq-fk-gRJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ApiApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Dgh-C8-JaJ" customClass="DogViewController" customModule="ApiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afi-c2-k7V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HT-PF-ion">
-                                <rect key="frame" x="109" y="401" width="103" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Kc-PAa">
+                                <rect key="frame" x="60" y="449" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CGR-nE-fm1"/>
+                                    <constraint firstAttribute="height" constant="50" id="gDQ-MY-Xr2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="hjr-tp-ceA"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="GET JOKE"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="GET DOG">
+                                            <attributes>
+                                                <color key="NSColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="21" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="getJokeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wxl-wd-5S9"/>
+                                    <action selector="getDogImageButtonPressed" destination="Dgh-C8-JaJ" eventType="touchUpInside" id="Hfb-sD-qGb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It will be a random joke over here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bv-2C-cXE">
-                                <rect key="frame" x="46" y="139" width="229" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-zg-au1">
+                                <rect key="frame" x="16" y="20" width="288" height="213"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rh2-6k-pYF">
+                                <rect key="frame" x="150" y="116.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Rs-Fx-iCv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Rs-Fx-iCv" firstAttribute="bottom" secondItem="YcR-Kc-PAa" secondAttribute="bottom" constant="20" id="7YN-Zg-VAP"/>
+                            <constraint firstItem="9Rs-Fx-iCv" firstAttribute="trailing" secondItem="k1T-zg-au1" secondAttribute="trailing" constant="16" id="CcJ-W9-0zQ"/>
+                            <constraint firstItem="k1T-zg-au1" firstAttribute="top" secondItem="9Rs-Fx-iCv" secondAttribute="top" constant="20" id="EfQ-uO-4Ne"/>
+                            <constraint firstItem="rh2-6k-pYF" firstAttribute="centerX" secondItem="k1T-zg-au1" secondAttribute="centerX" id="HOG-Az-ZjI"/>
+                            <constraint firstItem="YcR-Kc-PAa" firstAttribute="centerX" secondItem="afi-c2-k7V" secondAttribute="centerX" id="Pwm-um-vBe"/>
+                            <constraint firstItem="k1T-zg-au1" firstAttribute="height" secondItem="afi-c2-k7V" secondAttribute="height" multiplier="0.375" id="Rny-8r-S9h"/>
+                            <constraint firstItem="k1T-zg-au1" firstAttribute="leading" secondItem="9Rs-Fx-iCv" secondAttribute="leading" constant="16" id="pBi-gt-Ykz"/>
+                            <constraint firstItem="rh2-6k-pYF" firstAttribute="centerY" secondItem="k1T-zg-au1" secondAttribute="centerY" id="qKX-x0-Xv6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="fgb-cs-QBY"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rh2-6k-pYF" id="7sa-Tm-FBF"/>
+                        <outlet property="dogImageView" destination="k1T-zg-au1" id="yzS-Vd-Jbi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWU-CB-OFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-798.75" y="-225"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="mj7-lI-KTc">
+            <objects>
+                <viewController id="VYS-kX-15o" customClass="JokeViewController" customModule="ApiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XVW-31-4rw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10f-6C-G54">
+                                <rect key="frame" x="60" y="449" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2ee-KR-lJg"/>
+                                    <constraint firstAttribute="width" constant="200" id="WWF-vy-GGC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="WbU-si-6D2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="qzn-9Y-0kQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="GET JOKE">
+                                            <attributes>
+                                                <color key="NSColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="21" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getJokeButtonPressed" destination="VYS-kX-15o" eventType="touchUpInside" id="Cm7-r8-qBU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-8w-zXm">
+                                <rect key="frame" x="16" y="20" width="288" height="213"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="iZz-Vu-bqD"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="It will be a random joke over here">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -38,23 +121,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Am7-Jj-Sgo">
-                                <rect key="frame" x="96" y="502" width="128" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="One more Api"/>
-                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="48o-j5-ZFH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="48o-j5-ZFH" firstAttribute="trailing" secondItem="ovU-8w-zXm" secondAttribute="trailing" constant="16" id="MD7-Hu-bHn"/>
+                            <constraint firstItem="ovU-8w-zXm" firstAttribute="leading" secondItem="48o-j5-ZFH" secondAttribute="leading" constant="16" id="SQc-KY-RmA"/>
+                            <constraint firstItem="ovU-8w-zXm" firstAttribute="top" secondItem="48o-j5-ZFH" secondAttribute="top" constant="20" id="lul-wf-5Ki"/>
+                            <constraint firstItem="48o-j5-ZFH" firstAttribute="bottom" secondItem="10f-6C-G54" secondAttribute="bottom" constant="20" id="vP6-pu-9tx"/>
+                            <constraint firstItem="ovU-8w-zXm" firstAttribute="height" secondItem="XVW-31-4rw" secondAttribute="height" multiplier="0.375" id="xaR-Zt-qT9"/>
+                            <constraint firstItem="10f-6C-G54" firstAttribute="centerX" secondItem="XVW-31-4rw" secondAttribute="centerX" id="ymD-lc-qI3"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="ZFs-s0-cxM"/>
                     <connections>
-                        <outlet property="jokeScreen" destination="0Bv-2C-cXE" id="BV8-FO-WWd"/>
+                        <outlet property="jokeScreen" destination="ovU-8w-zXm" id="7Wh-9J-YNp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zuU-jo-0cs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.875" y="-2.112676056338028"/>
+            <point key="canvasLocation" x="-800.625" y="-972.88732394366195"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QIk-LZ-cjz">
+            <objects>
+                <tabBarController id="jHf-XQ-eh2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vkm-7N-ok7">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VYS-kX-15o" kind="relationship" relationship="viewControllers" id="VCp-jN-ebx"/>
+                        <segue destination="Dgh-C8-JaJ" kind="relationship" relationship="viewControllers" id="h6f-Ow-SuM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onT-Sx-OTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1753" y="-557"/>
         </scene>
     </scenes>
     <resources>

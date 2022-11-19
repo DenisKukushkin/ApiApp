@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  JokeViewController.swift
 //  ApiApp
 //
 //  Created by Denis Kukushkin on 18.11.2022.
@@ -7,25 +7,21 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
-    let jokeApi = "https://api.chucknorris.io/jokes/random"
+class JokeViewController: UIViewController {
     
     @IBOutlet weak var jokeScreen: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    let jokeApi = "https://api.chucknorris.io/jokes/random"
 
-    @IBAction func getJokeButton(_ sender: Any) {
-        getJokeButtonPressed()
+    @IBAction func getJokeButtonPressed() {
+        fetchJoke()
     }
     
 }
 
 // MARK: - Networking
-extension MainViewController {
-    private func getJokeButtonPressed() {
+extension JokeViewController {
+    private func fetchJoke() {
         guard let url = URL(string: jokeApi) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in

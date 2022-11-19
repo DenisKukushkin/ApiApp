@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		AC9DC5FE29276057007946E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC5FD29276057007946E9 /* AppDelegate.swift */; };
 		AC9DC60029276057007946E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC5FF29276057007946E9 /* SceneDelegate.swift */; };
-		AC9DC60229276057007946E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC60129276057007946E9 /* MainViewController.swift */; };
+		AC9DC60229276057007946E9 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC60129276057007946E9 /* JokeViewController.swift */; };
 		AC9DC60529276057007946E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9DC60329276057007946E9 /* Main.storyboard */; };
 		AC9DC60729276058007946E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9DC60629276058007946E9 /* Assets.xcassets */; };
 		AC9DC60A29276058007946E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9DC60829276058007946E9 /* LaunchScreen.storyboard */; };
 		ACB65AD929276517008EDD0F /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB65AD829276517008EDD0F /* Joke.swift */; };
+		ACC4D15A2927DB26005CCF8F /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4D1592927DB26005CCF8F /* DogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC9DC5FA29276057007946E9 /* ApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DC5FD29276057007946E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC9DC5FF29276057007946E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC9DC60129276057007946E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AC9DC60129276057007946E9 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		AC9DC60429276057007946E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC9DC60629276058007946E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9DC60929276058007946E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC9DC60B29276058007946E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACB65AD829276517008EDD0F /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		ACC4D1592927DB26005CCF8F /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				AC9DC5FD29276057007946E9 /* AppDelegate.swift */,
 				AC9DC5FF29276057007946E9 /* SceneDelegate.swift */,
-				AC9DC60129276057007946E9 /* MainViewController.swift */,
+				AC9DC60129276057007946E9 /* JokeViewController.swift */,
+				ACC4D1592927DB26005CCF8F /* DogViewController.swift */,
 				AC9DC60329276057007946E9 /* Main.storyboard */,
 				ACB65AD829276517008EDD0F /* Joke.swift */,
 				AC9DC60629276058007946E9 /* Assets.xcassets */,
@@ -141,9 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC9DC60229276057007946E9 /* MainViewController.swift in Sources */,
+				AC9DC60229276057007946E9 /* JokeViewController.swift in Sources */,
 				AC9DC5FE29276057007946E9 /* AppDelegate.swift in Sources */,
 				ACB65AD929276517008EDD0F /* Joke.swift in Sources */,
+				ACC4D15A2927DB26005CCF8F /* DogViewController.swift in Sources */,
 				AC9DC60029276057007946E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
