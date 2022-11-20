@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC25A3A9292AB2650027F7C7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25A3A8292AB2650027F7C7 /* NetworkManager.swift */; };
 		AC9DC5FE29276057007946E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC5FD29276057007946E9 /* AppDelegate.swift */; };
 		AC9DC60029276057007946E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC5FF29276057007946E9 /* SceneDelegate.swift */; };
 		AC9DC60229276057007946E9 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DC60129276057007946E9 /* JokeViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC25A3A8292AB2650027F7C7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AC9DC5FA29276057007946E9 /* ApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DC5FD29276057007946E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC9DC5FF29276057007946E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +64,13 @@
 			children = (
 				AC9DC5FD29276057007946E9 /* AppDelegate.swift */,
 				AC9DC5FF29276057007946E9 /* SceneDelegate.swift */,
+				ACB65AD829276517008EDD0F /* Joke.swift */,
 				AC9DC60129276057007946E9 /* JokeViewController.swift */,
 				ACC4D1592927DB26005CCF8F /* DogViewController.swift */,
+				AC25A3A8292AB2650027F7C7 /* NetworkManager.swift */,
 				AC9DC60329276057007946E9 /* Main.storyboard */,
-				ACB65AD829276517008EDD0F /* Joke.swift */,
-				AC9DC60629276058007946E9 /* Assets.xcassets */,
 				AC9DC60829276058007946E9 /* LaunchScreen.storyboard */,
+				AC9DC60629276058007946E9 /* Assets.xcassets */,
 				AC9DC60B29276058007946E9 /* Info.plist */,
 			);
 			path = ApiApp;
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC25A3A9292AB2650027F7C7 /* NetworkManager.swift in Sources */,
 				AC9DC60229276057007946E9 /* JokeViewController.swift in Sources */,
 				AC9DC5FE29276057007946E9 /* AppDelegate.swift in Sources */,
 				ACB65AD929276517008EDD0F /* Joke.swift in Sources */,

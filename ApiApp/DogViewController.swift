@@ -7,9 +7,12 @@
 
 import UIKit
 
-let httpCodes = [100, 101, 102, 103, Int.random(in: 200...208), 218, 226, Int.random(in: 300...308),
-                 Int.random(in: 400...431), 440, 444, 449, 450, 451, 460, 463, 464, Int.random(in: 494...511),
-                 Int.random(in: 520...530), 561, 598, 599, 999]
+let httpCodes = [
+                100, 101, 102, 103, Int.random(in: 200...208), 218, 226,
+                Int.random(in: 300...308),Int.random(in: 400...431), 440,
+                444, 449, 450, 451, 460, 463, 464, Int.random(in: 494...511),
+                Int.random(in: 520...530), 561, 598, 599, 999
+]
 
 class DogViewController: UIViewController {
     
@@ -27,19 +30,29 @@ class DogViewController: UIViewController {
         fetchImage()
     }
     
-}
-
-// MARK: - Networking
-extension DogViewController {
     private func fetchImage() {
         DispatchQueue.global().async {
-            guard let url = URL(string: self.dogApi) else { return }
-            guard let imageData = try? Data(contentsOf: url) else { return }
+            guard let imageData = NetworkManager.shared.fetchImage(from: self.dogApi) else { return }
             DispatchQueue.main.async {
                 self.dogImageView.image = UIImage(data: imageData)
                 self.activityIndicator.stopAnimating()
             }
         }
     }
+    
 }
+
+//// MARK: - Networking
+//extension DogViewController {
+//    private func fetchImage() {
+//        DispatchQueue.global().async {
+//            guard let url = URL(string: self.dogApi) else { return }
+//            guard let imageData = try? Data(contentsOf: url) else { return }
+//            DispatchQueue.main.async {
+//                self.dogImageView.image = UIImage(data: imageData)
+//                self.activityIndicator.stopAnimating()
+//            }
+//        }
+//    }
+//}
 
