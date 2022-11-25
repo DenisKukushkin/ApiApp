@@ -42,17 +42,4 @@ class DogViewController: UIViewController {
     
 }
 
-//// MARK: - Networking
-//extension DogViewController {
-//    private func fetchImage() {
-//        DispatchQueue.global().async {
-//            guard let url = URL(string: self.dogApi) else { return }
-//            guard let imageData = try? Data(contentsOf: url) else { return }
-//            DispatchQueue.main.async {
-//                self.dogImageView.image = UIImage(data: imageData)
-//                self.activityIndicator.stopAnimating()
-//            }
-//        }
-//    }
-//}
 
